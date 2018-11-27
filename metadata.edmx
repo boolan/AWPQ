@@ -107,29 +107,25 @@
 					sap:searchable="true" sap:addressable="true" sap:requires-filter="false" sap:content-version="1"/>
 				<EntitySet Name="Arbeitstellen" EntityType="AWPQ_SRV.Arbeitstelle" sap:searchable="true" sap:addressable="false" sap:requires-filter="true"
 					sap:content-version="1"/>
-				<EntitySet Name="Taktpakete" EntityType="AWPQ_SRV.Taktpaket" sap:searchable="true" sap:addressable="false" sap:requires-filter="true"
+				<EntitySet Name="Taktpakete" EntityType="AWPQ_SRV.Taktpaket" sap:searchable="true" sap:addressable="true" sap:requires-filter="false"
 					sap:content-version="1"/>
-				<EntitySet Name="ArbeitstellenImTaktpaket" EntityType="AWPQ_SRV.ArbeitstelleImTaktpaket" sap:searchable="true" sap:addressable="false"
-					sap:requires-filter="true" sap:content-version="1"/>
-
+				<EntitySet Name="ArbeitstellenImTaktpaket" EntityType="AWPQ_SRV.ArbeitstelleImTaktpaket" sap:searchable="true" sap:addressable="true"
+					sap:requires-filter="false" sap:content-version="1"/>
 				<AssociationSet Name="Meistereien2Arbeitstellen" Association="AWPQ_SRV.Meisterei2Arbeitstellen" sap:creatable="false" sap:updatable="false"
 					sap:deletable="false" sap:content-version="1">
 					<End EntitySet="Meistereien" Role="FromRole_Meisterei2Arbeitstellen"/>
 					<End EntitySet="Arbeitstellen" Role="ToRole_Meisterei2Arbeitstellen"/>
 				</AssociationSet>
-				
 				<AssociationSet Name="Meistereien2Taktpakete" Association="AWPQ_SRV.Meisterei2Taktpakete" sap:creatable="false" sap:updatable="false"
 					sap:deletable="false" sap:content-version="1">
 					<End EntitySet="Meistereien" Role="FromRole_Meisterei2Taktpakete"/>
 					<End EntitySet="Taktpakete" Role="ToRole_Meisterei2Taktpakete"/>
 				</AssociationSet>
-				
 				<AssociationSet Name="Arbeitstellen2Taktpakete" Association="AWPQ_SRV.Arbeitstelle2Taktpakete" sap:creatable="false" sap:updatable="false"
 					sap:deletable="false" sap:content-version="1">
 					<End EntitySet="Arbeitstellen" Role="FromRole_Arbeitstelle2Taktpakete"/>
 					<End EntitySet="ArbeitstellenImTaktpaket" Role="ToRole_Arbeitstelle2Taktpakete"/>
 				</AssociationSet>
-				
 				<AssociationSet Name="Taktpakete2Arbeitstellen" Association="AWPQ_SRV.Taktpaket2Arbeitstellen" sap:creatable="false" sap:updatable="false"
 					sap:deletable="false" sap:content-version="1">
 					<End EntitySet="Taktpakete" Role="FromRole_Taktpaket2Arbeitstellen"/>
